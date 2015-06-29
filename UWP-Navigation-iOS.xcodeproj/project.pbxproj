@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27C185F31B42023F00DB6BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C185F21B42023F00DB6BE3 /* AppDelegate.swift */; };
+		27C185F51B42023F00DB6BE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C185F41B42023F00DB6BE3 /* ViewController.swift */; };
+		27C185F81B42023F00DB6BE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C185F61B42023F00DB6BE3 /* Main.storyboard */; };
+		27C185FA1B42023F00DB6BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C185F91B42023F00DB6BE3 /* Assets.xcassets */; };
+		27C185FD1B42023F00DB6BE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C185FB1B42023F00DB6BE3 /* LaunchScreen.storyboard */; };
+		27C186081B42023F00DB6BE3 /* UWP_Navigation_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C186071B42023F00DB6BE3 /* UWP_Navigation_iOSTests.swift */; };
+		27C186131B42023F00DB6BE3 /* UWP_Navigation_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C186121B42023F00DB6BE3 /* UWP_Navigation_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27C186041B42023F00DB6BE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27C185E71B42023F00DB6BE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C185EE1B42023F00DB6BE3;
+			remoteInfo = "UWP-Navigation-iOS";
+		};
+		27C1860F1B42023F00DB6BE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27C185E71B42023F00DB6BE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C185EE1B42023F00DB6BE3;
+			remoteInfo = "UWP-Navigation-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27C185EF1B42023F00DB6BE3 /* UWP-Navigation-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UWP-Navigation-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C185F21B42023F00DB6BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27C185F41B42023F00DB6BE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27C185F71B42023F00DB6BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27C185F91B42023F00DB6BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27C185FC1B42023F00DB6BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27C185FE1B42023F00DB6BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C186031B42023F00DB6BE3 /* UWP-Navigation-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UWP-Navigation-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C186071B42023F00DB6BE3 /* UWP_Navigation_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UWP_Navigation_iOSTests.swift; sourceTree = "<group>"; };
+		27C186091B42023F00DB6BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C1860E1B42023F00DB6BE3 /* UWP-Navigation-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UWP-Navigation-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C186121B42023F00DB6BE3 /* UWP_Navigation_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UWP_Navigation_iOSUITests.swift; sourceTree = "<group>"; };
+		27C186141B42023F00DB6BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27C185EC1B42023F00DB6BE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C186001B42023F00DB6BE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C1860B1B42023F00DB6BE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27C185E61B42023F00DB6BE3 = {
+			isa = PBXGroup;
+			children = (
+				27C185F11B42023F00DB6BE3 /* UWP-Navigation-iOS */,
+				27C186061B42023F00DB6BE3 /* UWP-Navigation-iOSTests */,
+				27C186111B42023F00DB6BE3 /* UWP-Navigation-iOSUITests */,
+				27C185F01B42023F00DB6BE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27C185F01B42023F00DB6BE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27C185EF1B42023F00DB6BE3 /* UWP-Navigation-iOS.app */,
+				27C186031B42023F00DB6BE3 /* UWP-Navigation-iOSTests.xctest */,
+				27C1860E1B42023F00DB6BE3 /* UWP-Navigation-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27C185F11B42023F00DB6BE3 /* UWP-Navigation-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				27C185F21B42023F00DB6BE3 /* AppDelegate.swift */,
+				27C185F41B42023F00DB6BE3 /* ViewController.swift */,
+				27C185F61B42023F00DB6BE3 /* Main.storyboard */,
+				27C185F91B42023F00DB6BE3 /* Assets.xcassets */,
+				27C185FB1B42023F00DB6BE3 /* LaunchScreen.storyboard */,
+				27C185FE1B42023F00DB6BE3 /* Info.plist */,
+			);
+			path = "UWP-Navigation-iOS";
+			sourceTree = "<group>";
+		};
+		27C186061B42023F00DB6BE3 /* UWP-Navigation-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				27C186071B42023F00DB6BE3 /* UWP_Navigation_iOSTests.swift */,
+				27C186091B42023F00DB6BE3 /* Info.plist */,
+			);
+			path = "UWP-Navigation-iOSTests";
+			sourceTree = "<group>";
+		};
+		27C186111B42023F00DB6BE3 /* UWP-Navigation-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27C186121B42023F00DB6BE3 /* UWP_Navigation_iOSUITests.swift */,
+				27C186141B42023F00DB6BE3 /* Info.plist */,
+			);
+			path = "UWP-Navigation-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27C185EE1B42023F00DB6BE3 /* UWP-Navigation-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C186171B42023F00DB6BE3 /* Build configuration list for PBXNativeTarget "UWP-Navigation-iOS" */;
+			buildPhases = (
+				27C185EB1B42023F00DB6BE3 /* Sources */,
+				27C185EC1B42023F00DB6BE3 /* Frameworks */,
+				27C185ED1B42023F00DB6BE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UWP-Navigation-iOS";
+			productName = "UWP-Navigation-iOS";
+			productReference = 27C185EF1B42023F00DB6BE3 /* UWP-Navigation-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27C186021B42023F00DB6BE3 /* UWP-Navigation-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C1861A1B42023F00DB6BE3 /* Build configuration list for PBXNativeTarget "UWP-Navigation-iOSTests" */;
+			buildPhases = (
+				27C185FF1B42023F00DB6BE3 /* Sources */,
+				27C186001B42023F00DB6BE3 /* Frameworks */,
+				27C186011B42023F00DB6BE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27C186051B42023F00DB6BE3 /* PBXTargetDependency */,
+			);
+			name = "UWP-Navigation-iOSTests";
+			productName = "UWP-Navigation-iOSTests";
+			productReference = 27C186031B42023F00DB6BE3 /* UWP-Navigation-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27C1860D1B42023F00DB6BE3 /* UWP-Navigation-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C1861D1B42023F00DB6BE3 /* Build configuration list for PBXNativeTarget "UWP-Navigation-iOSUITests" */;
+			buildPhases = (
+				27C1860A1B42023F00DB6BE3 /* Sources */,
+				27C1860B1B42023F00DB6BE3 /* Frameworks */,
+				27C1860C1B42023F00DB6BE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27C186101B42023F00DB6BE3 /* PBXTargetDependency */,
+			);
+			name = "UWP-Navigation-iOSUITests";
+			productName = "UWP-Navigation-iOSUITests";
+			productReference = 27C1860E1B42023F00DB6BE3 /* UWP-Navigation-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27C185E71B42023F00DB6BE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "App Factory";
+				TargetAttributes = {
+					27C185EE1B42023F00DB6BE3 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					27C186021B42023F00DB6BE3 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 27C185EE1B42023F00DB6BE3;
+					};
+					27C1860D1B42023F00DB6BE3 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 27C185EE1B42023F00DB6BE3;
+					};
+				};
+			};
+			buildConfigurationList = 27C185EA1B42023F00DB6BE3 /* Build configuration list for PBXProject "UWP-Navigation-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27C185E61B42023F00DB6BE3;
+			productRefGroup = 27C185F01B42023F00DB6BE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27C185EE1B42023F00DB6BE3 /* UWP-Navigation-iOS */,
+				27C186021B42023F00DB6BE3 /* UWP-Navigation-iOSTests */,
+				27C1860D1B42023F00DB6BE3 /* UWP-Navigation-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27C185ED1B42023F00DB6BE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C185FD1B42023F00DB6BE3 /* LaunchScreen.storyboard in Resources */,
+				27C185FA1B42023F00DB6BE3 /* Assets.xcassets in Resources */,
+				27C185F81B42023F00DB6BE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C186011B42023F00DB6BE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C1860C1B42023F00DB6BE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27C185EB1B42023F00DB6BE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C185F51B42023F00DB6BE3 /* ViewController.swift in Sources */,
+				27C185F31B42023F00DB6BE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C185FF1B42023F00DB6BE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C186081B42023F00DB6BE3 /* UWP_Navigation_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27C1860A1B42023F00DB6BE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C186131B42023F00DB6BE3 /* UWP_Navigation_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27C186051B42023F00DB6BE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C185EE1B42023F00DB6BE3 /* UWP-Navigation-iOS */;
+			targetProxy = 27C186041B42023F00DB6BE3 /* PBXContainerItemProxy */;
+		};
+		27C186101B42023F00DB6BE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C185EE1B42023F00DB6BE3 /* UWP-Navigation-iOS */;
+			targetProxy = 27C1860F1B42023F00DB6BE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27C185F61B42023F00DB6BE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C185F71B42023F00DB6BE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27C185FB1B42023F00DB6BE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C185FC1B42023F00DB6BE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27C186151B42023F00DB6BE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27C186161B42023F00DB6BE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27C186181B42023F00DB6BE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UWP-Navigation-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uwp.edu.UWP-Navigation-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27C186191B42023F00DB6BE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UWP-Navigation-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uwp.edu.UWP-Navigation-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		27C1861B1B42023F00DB6BE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "UWP-Navigation-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uwp.edu.UWP-Navigation-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UWP-Navigation-iOS.app/UWP-Navigation-iOS";
+			};
+			name = Debug;
+		};
+		27C1861C1B42023F00DB6BE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "UWP-Navigation-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uwp.edu.UWP-Navigation-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UWP-Navigation-iOS.app/UWP-Navigation-iOS";
+			};
+			name = Release;
+		};
+		27C1861E1B42023F00DB6BE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "UWP-Navigation-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uwp.edu.UWP-Navigation-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "UWP-Navigation-iOS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		27C1861F1B42023F00DB6BE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "UWP-Navigation-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uwp.edu.UWP-Navigation-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "UWP-Navigation-iOS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27C185EA1B42023F00DB6BE3 /* Build configuration list for PBXProject "UWP-Navigation-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C186151B42023F00DB6BE3 /* Debug */,
+				27C186161B42023F00DB6BE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27C186171B42023F00DB6BE3 /* Build configuration list for PBXNativeTarget "UWP-Navigation-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C186181B42023F00DB6BE3 /* Debug */,
+				27C186191B42023F00DB6BE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27C1861A1B42023F00DB6BE3 /* Build configuration list for PBXNativeTarget "UWP-Navigation-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C1861B1B42023F00DB6BE3 /* Debug */,
+				27C1861C1B42023F00DB6BE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27C1861D1B42023F00DB6BE3 /* Build configuration list for PBXNativeTarget "UWP-Navigation-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27C1861E1B42023F00DB6BE3 /* Debug */,
+				27C1861F1B42023F00DB6BE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27C185E71B42023F00DB6BE3 /* Project object */;
+}
