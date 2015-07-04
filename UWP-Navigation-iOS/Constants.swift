@@ -52,6 +52,15 @@ class Constants
     
     static let SAC_OVERFLOW_1_ID = "SAC_Overflow_1"
     
+    static let STUDENT_CENTER = "Student Center"
+    static let MOLN_HALL = "Molinaro Hall"
+    static let GRNQ_HALL = "Greenquist Hall"
+    static let WHYL_HALL = "Wyllie Hall"
+    static let RITA_HALL = "The Rita"
+    static let SAC = "Sports and Activity Center"
+    static let TALLENT_HALL = "Tallent Hall"
+    static let SHCC = "Student Health and Counseling Center"
+    
     // MARK: Map
     static let DEFAULT_CAMERA_LAT:Double = 42.646056
     static let DEFAULT_CAMERA_LON:Double = -87.855468

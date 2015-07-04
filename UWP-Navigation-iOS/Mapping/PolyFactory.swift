@@ -5,7 +5,7 @@
 //  Created by Kyle Zawacki on 6/30/15.
 //  Copyright © 2015 App Factory. All rights reserved.
 //
-//  Contains the GMSPolygon objects for every parking lot section.
+//  Creates the ZonePolygon objects for every parking lot zone and UW Parkside buildings.
 
 import UIKit
 
@@ -126,6 +126,77 @@ class Polyfactory
     let E_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.642354, longitude: -87.857605)
     //SAC Overflow (E) Coordinates End
     
+    //Tallent Hall Outline Coordinates Begin
+    let TH_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647715, longitude: -87.847784)
+    let TH_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647706, longitude: -87.847213)
+    let TH_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647280, longitude: -87.847216)
+    let TH_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647292, longitude: -87.847803)
+    //Tallent Hall Outline Coordinates Ends
+    
+    //SHCC Outline Coordinates Begin
+    let SHCC_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.648067, longitude: -87.846325)
+    let SHCC_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.648059, longitude: -87.845912)
+    let SHCC_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647848, longitude: -87.846329)
+    let SHCC_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647850, longitude: -87.845916)
+    //SHCC Outline Coordinates Ends
+    
+    //Student Center Outline Coordinates Begin
+    let SC_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.648062, longitude: -87.855849)
+    let SC_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.648048, longitude: -87.854766)
+    let SC_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647773, longitude: -87.854766)
+    let SC_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647765, longitude: -87.85448)
+    let SC_ROW_3_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647343, longitude: -87.855845)
+    let SC_ROW_3_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647331, longitude: -87.854499)
+    //Student Center Outline Coordinates End
+
+    //Molinaro Hall Outline Coordinates Begin
+    let MOLN_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647207, longitude: -87.856888)
+    let MOLN_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647195, longitude: -87.855965)
+    let MOLN_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647017, longitude: -87.857083)
+    let MOLN_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647023, longitude: -87.856901)
+    let MOLN_ROW_2_POINT_3:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.647003, longitude: -87.854994)
+    let MOLN_ROW_3_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646816, longitude: -87.85708)
+    let MOLN_ROW_3_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646773, longitude: -87.855586)
+    let MOLN_ROW_4_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646647, longitude: -87.855586)
+    let MOLN_ROW_4_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646651, longitude: -87.855028)
+    //Molinaro Hall Outline Coordinates End
+    
+    //Greenquist Hall Outline Coordinates Begin
+    let GRNQ_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646652, longitude: -87.855866)
+    let GRNQ_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646654, longitude: -87.8549)
+    let GRNQ_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646244, longitude: -87.855216)
+    let GRNQ_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.646254, longitude: -87.854913)
+    let GRNQ_ROW_3_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.64578, longitude: -87.855897)
+    let GRNQ_ROW_3_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.6458, longitude: -87.855234)
+    //Greenquist Hall Outline Coordinates End
+    
+    //Wyllie Hall Outline Coordinates Begin
+    let WHYL_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645925, longitude: -87.855242)
+    let WHYL_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645923, longitude: -87.854458)
+    let WHYL_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645798, longitude: -87.855591)
+    let WHYL_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.6458, longitude: -87.855227)
+    let WHYL_ROW_3_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.644963, longitude: -87.855573)
+    let WHYL_ROW_3_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.644967, longitude: -87.854523)
+    //Wyllie Hall Outline Coordinates End
+    
+    //Rita Hall Outline Coordinates Begin
+    let RITA_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645668, longitude: -87.85703)
+    let RITA_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645659, longitude: -87.856179)
+    let RITA_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645353, longitude: -87.856202)
+    let RITA_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.645345, longitude: -87.855583)
+    let RITA_ROW_3_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.644846, longitude: -87.85626)
+    let RITA_ROW_3_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.644853, longitude: -87.8556)
+    let RITA_ROW_4_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.644567, longitude: -87.857059)
+    let RITA_ROW_4_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.644555, longitude: -87.856259)
+    //Rita Hall Outline Coordinates End
+    
+    //SAC Outline Coordinates Begin
+    let SAC_ROW_1_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.643081, longitude: -87.857589)
+    let SAC_ROW_1_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.643051, longitude: -87.855677)
+    let SAC_ROW_2_POINT_1:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.642096, longitude: -87.857624)
+    let SAC_ROW_2_POINT_2:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.642046, longitude: -87.855669)
+    //SAC Outline Coordinates End
+    
     // MARK: POLYGON PATHS
     
     // Talent (T)
@@ -174,8 +245,32 @@ class Polyfactory
     
     //SAC Overflow (E)
     let E_ZONE_1_PATH:GMSMutablePath = GMSMutablePath()
+    
+    // Tallent Hall building
+    let TALLENT_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // SHCC building
+    let SHCC_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // Student Center building
+    let  SC_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // Molinaro Hall building
+    let MOLN_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // Greenquist Hall building
+    let GRNQ_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // Wyllie Hall building
+    let  WHYL_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // Rita Hall building
+    let  RITA_OUTLINE:GMSMutablePath = GMSMutablePath()
+    
+    // SAC building
+    let SAC_OUTLINE:GMSMutablePath = GMSMutablePath()
 
-    // MARK: POLYGONS
+    // MARK: parkingZones
     
     // Talent (T)
     let T_ZONE_1:GMSPolygon?
@@ -223,9 +318,34 @@ class Polyfactory
     
     //SAC Overflow (E)
     let E_ZONE_1:GMSPolygon?
+    
+    // Tallent Hall building
+    let tallentZone:GMSPolygon?
+    
+    // SHCC building
+    let shccZone:GMSPolygon?
+    
+    // Student Center building
+    let studentCenterZone:GMSPolygon?
+    
+    // Molinaro Hall building
+    let molinaroZone:GMSPolygon?
+    
+    // Greenquist Hall building
+    let greenquistZone:GMSPolygon?
+    
+    // Wyllie Hall building
+    let wyllieZone:GMSPolygon?
+    
+    // Rita Hall building
+    let ritaZone:GMSPolygon?
+    
+    // SAC building
+    let sacZone:GMSPolygon?
 
-    // The dictionary that stores all of the polygons for the zones. Each polygon can be obtained by a unique universal ID
-    var polygons = [ZonePolygon]()
+    // The array that stores all of the zones for the parkingZones and buildingZones. Each polygon can be obtained by a unique universal ID
+    var parkingZones = [ZonePolygon]()
+    var buildingZones = [ZonePolygon]()
 
     // MARK: Initialization
     init()
@@ -268,12 +388,12 @@ class Polyfactory
         T_ZONE_5 = GMSPolygon(path: T_ZONE_5_PATH)
         T_ZONE_6 = GMSPolygon(path: T_ZONE_6_PATH)
         
-        polygons.append( ZonePolygon(withID: Constants.TALLENT_1_ID, andPolygon: T_ZONE_1!))
-        polygons.append( ZonePolygon(withID: Constants.TALLENT_2_ID, andPolygon: T_ZONE_2!))
-        polygons.append( ZonePolygon(withID: Constants.TALLENT_3_ID, andPolygon: T_ZONE_3!))
-        polygons.append( ZonePolygon(withID: Constants.TALLENT_4_ID, andPolygon: T_ZONE_4!))
-        polygons.append( ZonePolygon(withID: Constants.TALLENT_5_ID, andPolygon: T_ZONE_5!))
-        polygons.append( ZonePolygon(withID: Constants.TALLENT_6_ID, andPolygon: T_ZONE_6!))
+        parkingZones.append( ZonePolygon(withID: Constants.TALLENT_1_ID, andPolygon: T_ZONE_1!))
+        parkingZones.append( ZonePolygon(withID: Constants.TALLENT_2_ID, andPolygon: T_ZONE_2!))
+        parkingZones.append( ZonePolygon(withID: Constants.TALLENT_3_ID, andPolygon: T_ZONE_3!))
+        parkingZones.append( ZonePolygon(withID: Constants.TALLENT_4_ID, andPolygon: T_ZONE_4!))
+        parkingZones.append( ZonePolygon(withID: Constants.TALLENT_5_ID, andPolygon: T_ZONE_5!))
+        parkingZones.append( ZonePolygon(withID: Constants.TALLENT_6_ID, andPolygon: T_ZONE_6!))
         
         // Intitializes Student Center (A) zone poylgons
         A_ZONE_1_PATH.addCoordinate(A_ROW_1_POINT_1)
@@ -319,13 +439,13 @@ class Polyfactory
         A_ZONE_6 = GMSPolygon(path: A_ZONE_6_PATH)
         A_ZONE_7 = GMSPolygon(path: A_ZONE_7_PATH)
         
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_1_ID, andPolygon: A_ZONE_1!))
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_2_ID, andPolygon: A_ZONE_2!))
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_3_ID, andPolygon: A_ZONE_3!))
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_4_ID, andPolygon: A_ZONE_4!))
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_5_ID, andPolygon: A_ZONE_5!))
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_6_ID, andPolygon: A_ZONE_6!))
-        polygons.append( ZonePolygon(withID: Constants.STUDENT_CENTER_7_ID, andPolygon: A_ZONE_7!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_1_ID, andPolygon: A_ZONE_1!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_2_ID, andPolygon: A_ZONE_2!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_3_ID, andPolygon: A_ZONE_3!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_4_ID, andPolygon: A_ZONE_4!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_5_ID, andPolygon: A_ZONE_5!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_6_ID, andPolygon: A_ZONE_6!))
+        parkingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER_7_ID, andPolygon: A_ZONE_7!))
         
         // Intitializes Rita Main (B) zone poylgons
         B_ZONE_1_PATH.addCoordinate(B_ROW_1_POINT_1)
@@ -377,14 +497,14 @@ class Polyfactory
         B_ZONE_7 = GMSPolygon(path: B_ZONE_7_PATH)
         B_ZONE_8 = GMSPolygon(path: B_ZONE_8_PATH)
         
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_1_ID, andPolygon: B_ZONE_1!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_2_ID, andPolygon: B_ZONE_2!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_3_ID, andPolygon: B_ZONE_3!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_4_ID, andPolygon: B_ZONE_4!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_5_ID, andPolygon: B_ZONE_5!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_6_ID, andPolygon: B_ZONE_6!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_7_ID, andPolygon: B_ZONE_7!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_MAIN_8_ID, andPolygon: B_ZONE_8!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_1_ID, andPolygon: B_ZONE_1!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_2_ID, andPolygon: B_ZONE_2!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_3_ID, andPolygon: B_ZONE_3!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_4_ID, andPolygon: B_ZONE_4!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_5_ID, andPolygon: B_ZONE_5!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_6_ID, andPolygon: B_ZONE_6!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_7_ID, andPolygon: B_ZONE_7!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_MAIN_8_ID, andPolygon: B_ZONE_8!))
         
         // Intitializes Rita Overflow (C) zone poylgons
         C_ZONE_1_PATH.addCoordinate(C_ROW_1_POINT_1)
@@ -419,11 +539,11 @@ class Polyfactory
         C_ZONE_4 = GMSPolygon(path: C_ZONE_4_PATH)
         C_ZONE_5 = GMSPolygon(path: C_ZONE_5_PATH)
         
-        polygons.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_1_ID, andPolygon: C_ZONE_1!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_2_ID, andPolygon: C_ZONE_2!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_3_ID, andPolygon: C_ZONE_3!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_4_ID, andPolygon: C_ZONE_4!))
-        polygons.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_5_ID, andPolygon: C_ZONE_5!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_1_ID, andPolygon: C_ZONE_1!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_2_ID, andPolygon: C_ZONE_2!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_3_ID, andPolygon: C_ZONE_3!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_4_ID, andPolygon: C_ZONE_4!))
+        parkingZones.append( ZonePolygon(withID: Constants.RITA_OVERFLOW_5_ID, andPolygon: C_ZONE_5!))
         
         // Intitializes SAC Main (D) zone poylgons
         D_ZONE_1_PATH.addCoordinate(D_ROW_1_POINT_1)
@@ -479,16 +599,16 @@ class Polyfactory
         D_ZONE_7 = GMSPolygon(path: D_ZONE_7_PATH)
         D_ZONE_8 = GMSPolygon(path: D_ZONE_8_PATH)
         
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_1_ID, andPolygon: D_ZONE_1!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_2_ID, andPolygon: D_ZONE_2!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_3_ID, andPolygon: D_ZONE_3!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_4_ID, andPolygon: D_ZONE_4!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_5_ID, andPolygon: D_ZONE_5!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_6_ID, andPolygon: D_ZONE_6!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_7_ID, andPolygon: D_ZONE_7!))
-        polygons.append( ZonePolygon(withID: Constants.SAC_MAIN_8_ID, andPolygon: D_ZONE_8!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_1_ID, andPolygon: D_ZONE_1!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_2_ID, andPolygon: D_ZONE_2!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_3_ID, andPolygon: D_ZONE_3!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_4_ID, andPolygon: D_ZONE_4!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_5_ID, andPolygon: D_ZONE_5!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_6_ID, andPolygon: D_ZONE_6!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_7_ID, andPolygon: D_ZONE_7!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_MAIN_8_ID, andPolygon: D_ZONE_8!))
 
-        // Initializes SAC Overflow (E) zone polygons
+        // Initializes SAC Overflow (E) zone parkingZones
         
         E_ZONE_1_PATH.addCoordinate(E_ROW_1_POINT_1)
         E_ZONE_1_PATH.addCoordinate(E_ROW_1_POINT_2)
@@ -497,7 +617,90 @@ class Polyfactory
 
         E_ZONE_1 = GMSPolygon(path: E_ZONE_1_PATH)
         
-        polygons.append( ZonePolygon(withID: Constants.SAC_OVERFLOW_1_ID, andPolygon: E_ZONE_1!))
+        parkingZones.append( ZonePolygon(withID: Constants.SAC_OVERFLOW_1_ID, andPolygon: E_ZONE_1!))
+        
+        TALLENT_OUTLINE.addCoordinate(TH_ROW_1_POINT_1)
+        TALLENT_OUTLINE.addCoordinate(TH_ROW_1_POINT_2)
+        TALLENT_OUTLINE.addCoordinate(TH_ROW_2_POINT_2)
+        TALLENT_OUTLINE.addCoordinate(TH_ROW_2_POINT_1)
+        
+        SHCC_OUTLINE.addCoordinate(SHCC_ROW_1_POINT_1)
+        SHCC_OUTLINE.addCoordinate(SHCC_ROW_1_POINT_2)
+        SHCC_OUTLINE.addCoordinate(SHCC_ROW_2_POINT_2)
+        SHCC_OUTLINE.addCoordinate(SHCC_ROW_2_POINT_1)
+
+        SC_OUTLINE.addCoordinate(SC_ROW_1_POINT_1)
+        SC_OUTLINE.addCoordinate(SC_ROW_1_POINT_2)
+        SC_OUTLINE.addCoordinate(SC_ROW_2_POINT_1)
+        SC_OUTLINE.addCoordinate(SC_ROW_2_POINT_2)
+        SC_OUTLINE.addCoordinate(SC_ROW_3_POINT_2)
+        SC_OUTLINE.addCoordinate(SC_ROW_3_POINT_1)
+        
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_1_POINT_1)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_1_POINT_2)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_2_POINT_3)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_4_POINT_2)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_4_POINT_1)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_3_POINT_2)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_3_POINT_1)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_2_POINT_1)
+        MOLN_OUTLINE.addCoordinate(MOLN_ROW_2_POINT_2)
+
+        GRNQ_OUTLINE.addCoordinate(GRNQ_ROW_1_POINT_1)
+        GRNQ_OUTLINE.addCoordinate(GRNQ_ROW_1_POINT_2)
+        GRNQ_OUTLINE.addCoordinate(GRNQ_ROW_2_POINT_2)
+        GRNQ_OUTLINE.addCoordinate(GRNQ_ROW_2_POINT_1)
+        GRNQ_OUTLINE.addCoordinate(GRNQ_ROW_3_POINT_2)
+        GRNQ_OUTLINE.addCoordinate(GRNQ_ROW_3_POINT_1)
+
+        WHYL_OUTLINE.addCoordinate(WHYL_ROW_1_POINT_1)
+        WHYL_OUTLINE.addCoordinate(WHYL_ROW_1_POINT_2)
+        WHYL_OUTLINE.addCoordinate(WHYL_ROW_3_POINT_2)
+        WHYL_OUTLINE.addCoordinate(WHYL_ROW_3_POINT_1)
+        WHYL_OUTLINE.addCoordinate(WHYL_ROW_2_POINT_1)
+        WHYL_OUTLINE.addCoordinate(WHYL_ROW_2_POINT_2)
+        
+        RITA_OUTLINE.addCoordinate(RITA_ROW_1_POINT_1)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_1_POINT_2)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_2_POINT_1)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_2_POINT_2)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_3_POINT_2)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_3_POINT_1)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_4_POINT_2)
+        RITA_OUTLINE.addCoordinate(RITA_ROW_4_POINT_1)
+        
+        SAC_OUTLINE.addCoordinate(SAC_ROW_1_POINT_1)
+        SAC_OUTLINE.addCoordinate(SAC_ROW_1_POINT_2)
+        SAC_OUTLINE.addCoordinate(SAC_ROW_2_POINT_2)
+        SAC_OUTLINE.addCoordinate(SAC_ROW_2_POINT_1)
+        
+        tallentZone = GMSPolygon(path: TALLENT_OUTLINE)
+        shccZone = GMSPolygon(path: SHCC_OUTLINE)
+        studentCenterZone = GMSPolygon(path: SC_OUTLINE)
+        molinaroZone = GMSPolygon(path: MOLN_OUTLINE)
+        greenquistZone = GMSPolygon(path: GRNQ_OUTLINE)
+        wyllieZone = GMSPolygon(path: WHYL_OUTLINE)
+        ritaZone = GMSPolygon(path: RITA_OUTLINE)
+        sacZone = GMSPolygon(path: SAC_OUTLINE)
+        
+        buildingZones.append( ZonePolygon(withID: Constants.TALLENT_HALL, andPolygon: tallentZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.SHCC, andPolygon: shccZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.STUDENT_CENTER, andPolygon: studentCenterZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.MOLN_HALL, andPolygon: molinaroZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.GRNQ_HALL, andPolygon: greenquistZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.WHYL_HALL, andPolygon: wyllieZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.RITA_HALL, andPolygon: ritaZone!))
+        buildingZones.append( ZonePolygon(withID: Constants.SAC, andPolygon: sacZone!))
+
+        for parkingZone:ZonePolygon in self.parkingZones
+        {
+            parkingZone.polygon!.tappable = true
+        }
+        
+        for buildingZone:ZonePolygon in self.buildingZones
+        {
+            buildingZone.polygon!.tappable = true
+        }
     }
     
 }
