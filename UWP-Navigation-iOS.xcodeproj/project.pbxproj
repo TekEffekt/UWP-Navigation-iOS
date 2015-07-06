@@ -96,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		274F017D1B4A654300CEDF3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				274F01791B49D4C900CEDF3A /* DTProgressStatus.h */,
+				274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */,
+				274F01761B49D48200CEDF3A /* DTAlertView.h */,
+				274F01771B49D48200CEDF3A /* DTAlertView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		27C185E61B42023F00DB6BE3 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +132,7 @@
 		27C185F11B42023F00DB6BE3 /* UWP-Navigation-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				274F017D1B4A654300CEDF3A /* Views */,
 				27C186311B420D9700DB6BE3 /* View Controllers */,
 				27C1862A1B4209EF00DB6BE3 /* Mapping */,
 				27D320D61B4474D000E10F08 /* Constants.swift */,
@@ -128,10 +140,6 @@
 				27C185FB1B42023F00DB6BE3 /* LaunchScreen.storyboard */,
 				27C185F91B42023F00DB6BE3 /* Assets.xcassets */,
 				27C185FE1B42023F00DB6BE3 /* Info.plist */,
-				274F01791B49D4C900CEDF3A /* DTProgressStatus.h */,
-				274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */,
-				274F01761B49D48200CEDF3A /* DTAlertView.h */,
-				274F01771B49D48200CEDF3A /* DTAlertView.m */,
 				27C185F21B42023F00DB6BE3 /* AppDelegate.swift */,
 				27C186201B4207E600DB6BE3 /* UWP-Navigation-iOS-Bridging-Header.h */,
 			);

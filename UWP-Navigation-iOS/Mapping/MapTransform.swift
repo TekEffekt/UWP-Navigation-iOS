@@ -16,6 +16,7 @@ class MapTransform: MapObject, GMSMapViewDelegate
     var map:GMSMapView?
     var parkingZoneList:[ZonePolygon]?
     var buidlingZoneList:[ZonePolygon]?
+    var populationAlert:DTAlertView?
     
     // MARK: Map Initialization
     func setupMap()
@@ -25,6 +26,8 @@ class MapTransform: MapObject, GMSMapViewDelegate
         self.map = GMSMapView.mapWithFrame(self.frame, camera: camera)
         self.map!.delegate = self
         self.addSubview(self.map!)
+        
+        self.populationAlert = DTAlertView(title: "How full is this zone?", delegate: nil, cancelButtonTitle: "Cancel", positiveButtonTitle: "Submit")
         
         buildPolymap()
     }
@@ -64,8 +67,7 @@ class MapTransform: MapObject, GMSMapViewDelegate
             print("Nothing")
         }
         
-        let alert:DTAlertView = DTAlertView(title: "WHAT", delegate: nil, cancelButtonTitle: "WHAT", positiveButtonTitle: "WHAT")
-        alert.show()
+        self.populationAlert!.show()
     }
     
     func getZoneTapped(withOverlayTapped overlay:GMSOverlay) -> ZonePolygon?

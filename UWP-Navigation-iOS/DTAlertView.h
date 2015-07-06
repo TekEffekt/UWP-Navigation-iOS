@@ -82,6 +82,8 @@ typedef void (^DTAlertViewTextDidChangeBlock) (DTAlertView *alertView, NSString 
  * @see DTAlertViewDelegate
  */
 @property(strong, nonatomic) UISlider *slider;
+@property(strong, nonatomic) UILabel *percentLabel;
+@property(strong, nonatomic) UIPanGestureRecognizer *recognizer;
 
 @property (nonatomic, assign) id<DTAlertViewDelegate> delegate;
 

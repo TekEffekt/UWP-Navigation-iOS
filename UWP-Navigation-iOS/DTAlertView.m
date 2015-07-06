@@ -277,6 +277,11 @@ const static CGFloat kMotionEffectExtent = 15.0f;
     return DTAutorelease(alertView);
 }
 
+- (void)populationSliderChanged
+{
+    self.percentLabel.text = [NSString stringWithFormat:@"%d%%", (int)(self.slider.value * 100)];
+}
+
 - (DTInstancetype)initWithTitle:(NSString *)title delegate:(id<DTAlertViewDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle positiveButtonTitle:(NSString *)positiveButtonTitle
 {
     self = [super init];
@@ -303,8 +308,13 @@ const static CGFloat kMotionEffectExtent = 15.0f;
     
     _showForInputPassword = NO;
     
-    self.slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+    self.slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 240, 80)];
     self.slider.center = self.center;
+    
+    self.recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(populationSliderChanged)];
+    self.recognizer.cancelsTouchesInView = NO;
+    [self.slider addGestureRecognizer:self.recognizer];
+    self.slider.tintColor = [UIColor colorWithRed:0.016 green:0.416 blue:0.22 alpha:1]; /*#046a38*/
     
     [self setCancelButtonIndex];
     
@@ -371,10 +381,6 @@ const static CGFloat kMotionEffectExtent = 15.0f;
     if (_blurToolbar != nil) {
         [_blurToolbar setFrame:self.bounds];
     }
-    
-    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-    slider.center = self.center;
-    [self addSubview:slider];
 }
 
 #ifdef ARC_MODE_NOT_USED
@@ -1036,7 +1042,7 @@ const static CGFloat kMotionEffectExtent = 15.0f;
     
     // Message
     UILabel *messageLabel = [[UILabel alloc] init];
-    [messageLabel setText:_message];
+    [messageLabel setText:@"TEST \n \n \n"];
     [messageLabel setTextColor:[UIColor blackColor]];
     [messageLabel setTextAlignment:NSTextAlignmentCenter];
     [messageLabel setFont:[UIFont systemFontOfSize:15.0f]];
@@ -1044,6 +1050,7 @@ const static CGFloat kMotionEffectExtent = 15.0f;
     
     // Set lines of message text.
     [messageLabel setNumberOfLines:0];
+    messageLabel.alpha = 0.0;
     
     // Set message label position and size.
     CGRect messageRect = CGRectZero;
@@ -1299,8 +1306,14 @@ const static CGFloat kMotionEffectExtent = 15.0f;
         NSLog(@"Positive Button Frame: %@", NSStringFromCGRect(positiveButtonFrame));
 #endif
     }
-    
     [self resizeViewWithLastRect:buttonsField];
+    
+    self.slider.center = self.center;
+    
+    self.percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 25, self.center.y + self.slider.frame.size.height/2-50, 50, 50)];
+    self.percentLabel.textAlignment = NSTextAlignmentCenter;
+    self.percentLabel.text = @"0%";
+    [self addSubview:self.percentLabel];
     
     [self addSubview:self.slider];
 }
