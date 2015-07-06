@@ -63,6 +63,9 @@ class MapTransform: MapObject, GMSMapViewDelegate
         {
             print("Nothing")
         }
+        
+        let alert:DTAlertView = DTAlertView(title: "WHAT", delegate: nil, cancelButtonTitle: "WHAT", positiveButtonTitle: "WHAT")
+        alert.show()
     }
     
     func getZoneTapped(withOverlayTapped overlay:GMSOverlay) -> ZonePolygon?

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274F01781B49D48200CEDF3A /* DTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F01771B49D48200CEDF3A /* DTAlertView.m */; };
+		274F017B1B49D4C900CEDF3A /* DTProgressStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */; };
 		275BF7F41B432568002C7FB5 /* PolyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BF7F31B432568002C7FB5 /* PolyFactory.swift */; };
 		275BF7F61B433059002C7FB5 /* ZonePolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BF7F51B433059002C7FB5 /* ZonePolygon.swift */; };
 		27C185F31B42023F00DB6BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C185F21B42023F00DB6BE3 /* AppDelegate.swift */; };
@@ -19,7 +21,7 @@
 		27C186301B420A9500DB6BE3 /* MapTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1862F1B420A9500DB6BE3 /* MapTransform.swift */; };
 		27C186331B420DA800DB6BE3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C186321B420DA800DB6BE3 /* MainViewController.swift */; };
 		27D320D71B4474D000E10F08 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D320D61B4474D000E10F08 /* Constants.swift */; };
-		4BCFA3002F9F6D0BE59F1C9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE2FE3080B8831FE4E543C4 /* libPods.a */; };
+		C36AB63EA9032003A7A04A22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B07BDB01589E669F838074F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 /* Begin PBXFileReference section */
 		0D6B2C3836C2C35DF31CAA9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		16C381B0F75C04E03AC361D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		274F01761B49D48200CEDF3A /* DTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAlertView.h; sourceTree = "<group>"; };
+		274F01771B49D48200CEDF3A /* DTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAlertView.m; sourceTree = "<group>"; };
+		274F01791B49D4C900CEDF3A /* DTProgressStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProgressStatus.h; sourceTree = "<group>"; };
+		274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTProgressStatus.m; sourceTree = "<group>"; };
 		275BF7F31B432568002C7FB5 /* PolyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolyFactory.swift; path = Mapping/PolyFactory.swift; sourceTree = "<group>"; };
 		275BF7F51B433059002C7FB5 /* ZonePolygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZonePolygon.swift; path = Mapping/ZonePolygon.swift; sourceTree = "<group>"; };
 		27C185EF1B42023F00DB6BE3 /* UWP-Navigation-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UWP-Navigation-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +67,7 @@
 		27C1862F1B420A9500DB6BE3 /* MapTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapTransform.swift; path = Mapping/MapTransform.swift; sourceTree = "<group>"; };
 		27C186321B420DA800DB6BE3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
 		27D320D61B4474D000E10F08 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4EE2FE3080B8831FE4E543C4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07BDB01589E669F838074F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BCFA3002F9F6D0BE59F1C9F /* libPods.a in Frameworks */,
+				C36AB63EA9032003A7A04A22 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +128,10 @@
 				27C185FB1B42023F00DB6BE3 /* LaunchScreen.storyboard */,
 				27C185F91B42023F00DB6BE3 /* Assets.xcassets */,
 				27C185FE1B42023F00DB6BE3 /* Info.plist */,
+				274F01791B49D4C900CEDF3A /* DTProgressStatus.h */,
+				274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */,
+				274F01761B49D48200CEDF3A /* DTAlertView.h */,
+				274F01771B49D48200CEDF3A /* DTAlertView.m */,
 				27C185F21B42023F00DB6BE3 /* AppDelegate.swift */,
 				27C186201B4207E600DB6BE3 /* UWP-Navigation-iOS-Bridging-Header.h */,
 			);
@@ -177,7 +187,7 @@
 		9BCF6A033A68A8CA1313A472 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4EE2FE3080B8831FE4E543C4 /* libPods.a */,
+				B07BDB01589E669F838074F2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,8 +359,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D320D71B4474D000E10F08 /* Constants.swift in Sources */,
+				274F017B1B49D4C900CEDF3A /* DTProgressStatus.m in Sources */,
 				275BF7F61B433059002C7FB5 /* ZonePolygon.swift in Sources */,
 				27C185F31B42023F00DB6BE3 /* AppDelegate.swift in Sources */,
+				274F01781B49D48200CEDF3A /* DTAlertView.m in Sources */,
 				27C1862C1B420A2500DB6BE3 /* MapObject.swift in Sources */,
 				275BF7F41B432568002C7FB5 /* PolyFactory.swift in Sources */,
 				27C186301B420A9500DB6BE3 /* MapTransform.swift in Sources */,
