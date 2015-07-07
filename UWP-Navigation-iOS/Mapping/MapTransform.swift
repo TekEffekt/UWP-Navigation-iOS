@@ -53,6 +53,45 @@ class MapTransform: MapObject, GMSMapViewDelegate
         }
     }
     
+    func colorMap(withFullnessAndConfidenceLevels fullnessConfidenceStrings:[String])
+    {
+        for(var i = 0; i < fullnessConfidenceStrings.count; i++)
+        {
+            let levels = fullnessConfidenceStrings[i]
+            let fullnessString:String = levels.componentsSeparatedByString(",")[0]
+            let confidenceString:String = levels.componentsSeparatedByString(",")[1]
+            
+            let fullness:Int = Int(fullnessString)!
+            let confidence:Int = Int(confidenceString)!
+            
+            if let zone:ZonePolygon = self.parkingZoneList![i]
+            {
+                if (fullness > 66) {
+                    zone.polygon!.fillColor = UIColor.redColor()
+                }
+                else if (fullness >= 33 && fullness <= 66) {
+                    zone.polygon!.fillColor = UIColor.yellowColor()
+                }
+                else if(fullness < 33) {
+                    zone.polygon!.fillColor = UIColor.greenColor()
+                }
+            }
+            
+//            if (Double.valueOf(confidence) > 66) {
+//                this.color = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+//            }
+//            if (Double.valueOf(confidence) >= 33 && Double.valueOf(confidence) <= 66) {
+//                this.color = Color.argb(170, Color.red(color), Color.green(color), Color.blue(color));
+//            }
+//            if (Double.valueOf(confidence) < 33) {
+//                this.color = Color.argb(85, Color.red(color), Color.green(color), Color.blue(color));
+//            }
+//            if (Double.valueOf(fullness) == -1) {
+//                this.color = Color.DKGRAY;
+//            }
+        }
+    }
+    
     // MARK: Map Interaction
     func mapView(mapView: GMSMapView!, didTapOverlay overlay: GMSOverlay!)
     {

@@ -29,18 +29,18 @@ class DatabaseExchange
         request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         
         var response: NSURLResponse?
+        let urlData:NSData?
 
         do
         {
-            let urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-        } catch(NSData.)
+            urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+            let stringResult = NSString(data: urlData!, encoding: NSUTF8StringEncoding)!
+            return stringResult.stringByAppendingString("")
+        } catch
         {
-            
+            print("ERROR")
+            return ""
         }
-
-        let stringResult:String = NSString(data: urlData, encoding: NSUTF8StringEncoding)!
-        
-        return ""
     }
     
 }

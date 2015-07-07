@@ -27,23 +27,27 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
         super.viewDidAppear(animated)
         
         self.mapView.setupMapWithParent(self) // Needs to be called after contraints have been layed out, which is why the call is here
-        getFullnessOfZones()
+        getFullnessOfZones(withZones: Polyfactory().parkingZones)
     }
     
     // MARK: Networking
-    func getFullnessOfZones()
+    func getFullnessOfZones(withZones zones:[ZonePolygon])
     {
         let queue = NSOperationQueue()
         
         queue.addOperationWithBlock { () -> Void in
             var fullnessStrings:[String] = [String]()
             
-            for zone:ZonePolygon in Polyfactory().parkingZones
+            for zone:ZonePolygon in zones
             {
                 fullnessStrings.append(DatabaseExchange.getFullness(forZone: zone.id!))
             }
             
             print(fullnessStrings)
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.mapView.colorMap(withFullnessAndConfidenceLevels: fullnessStrings)
+            })
         }
     }
     
