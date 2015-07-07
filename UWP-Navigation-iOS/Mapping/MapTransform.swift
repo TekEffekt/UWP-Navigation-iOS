@@ -16,19 +16,18 @@ class MapTransform: MapObject, GMSMapViewDelegate
     var map:GMSMapView?
     var parkingZoneList:[ZonePolygon]?
     var buidlingZoneList:[ZonePolygon]?
-    var populationAlert:DTAlertView?
+    var passedViewController:MainViewController?
     
     // MARK: Map Initialization
-    func setupMap()
+    func setupMapWithParent(controller:MainViewController)
     {
         let camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(Constants.DEFAULT_CAMERA_LAT, longitude: Constants.DEFAULT_CAMERA_LON, zoom: 17)
         
         self.map = GMSMapView.mapWithFrame(self.frame, camera: camera)
         self.map!.delegate = self
         self.addSubview(self.map!)
-        
-        self.populationAlert = DTAlertView(title: "How full is this zone?", delegate: nil, cancelButtonTitle: "Cancel", positiveButtonTitle: "Submit")
-        
+        self.passedViewController = controller
+                
         buildPolymap()
     }
     
@@ -62,12 +61,12 @@ class MapTransform: MapObject, GMSMapViewDelegate
         if let zone = zoneTapped
         {
             print(zone.id!)
+            self.passedViewController?.displayAlertForZone(zone)
         } else
         {
             print("Nothing")
         }
         
-        self.populationAlert!.show()
     }
     
     func getZoneTapped(withOverlayTapped overlay:GMSOverlay) -> ZonePolygon?
@@ -90,5 +89,6 @@ class MapTransform: MapObject, GMSMapViewDelegate
         
         return nil
     }
+    
     
 }

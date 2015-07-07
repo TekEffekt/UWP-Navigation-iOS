@@ -64,4 +64,13 @@ class Constants
     // MARK: Map
     static let DEFAULT_CAMERA_LAT:Double = 42.646056
     static let DEFAULT_CAMERA_LON:Double = -87.855468
+    
+    // MARK: Networking
+    static let USER:String = "android"
+    static let PASS:String = "m@g!calTh!ng$"
+    static let BASE_URL = "http://cinnamon.cs.uwp.edu/parking/app.php/"
+    static let VOTE = "v/"
+    static let VOTE_AVG = "va/"
+    
+    
 }

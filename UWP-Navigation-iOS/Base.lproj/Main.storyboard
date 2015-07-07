@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="UWP Parking" id="Jvw-zy-Eu2"/>
                     <connections>
-                        <outlet property="mapObject" destination="ghs-JX-J33" id="0yT-RM-GqJ"/>
+                        <outlet property="mapView" destination="ghs-JX-J33" id="QZW-Vk-DGC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
