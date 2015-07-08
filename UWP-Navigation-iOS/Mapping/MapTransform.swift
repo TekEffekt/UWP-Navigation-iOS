@@ -42,14 +42,12 @@ class MapTransform: MapObject, GMSMapViewDelegate
             zonePoly.polygon!.strokeColor = UIColor.blackColor()
             zonePoly.polygon!.map = self.map
             
-            print(zonePoly.id!)
         }
         
         for buildingPoly:ZonePolygon in self.buidlingZoneList!
         {
             buildingPoly.polygon!.fillColor = UIColor.clearColor()
             buildingPoly.polygon!.map = self.map
-            print(buildingPoly.id!)
         }
     }
     
@@ -61,8 +59,8 @@ class MapTransform: MapObject, GMSMapViewDelegate
             let fullnessString:String = levels.componentsSeparatedByString(",")[0]
             let confidenceString:String = levels.componentsSeparatedByString(",")[1]
             
-            let fullness:Int = Int(fullnessString)!
-            let confidence:Int = Int(confidenceString)!
+            let fullness:Double = Double(fullnessString)!
+            let confidence:Double = Double(confidenceString)!
             
             if let zone:ZonePolygon = self.parkingZoneList![i]
             {

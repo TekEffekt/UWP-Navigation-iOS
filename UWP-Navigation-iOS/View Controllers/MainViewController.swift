@@ -13,6 +13,7 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
     // MARK: Properties
     @IBOutlet weak var mapView: MapTransform!
     var populationAlert:DTAlertView?
+    var zoneForRating:ZonePolygon?
 
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
@@ -51,14 +52,19 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
         }
     }
     
+    func alertView(alertView: DTAlertView!, clickedButtonAtIndex buttonIndex: Int)
+    {
+        if buttonIndex == 1 // So submit button was pressed on the alert
+        {
+            let vote:Int = (Int)(100 * alertView.slider.value)
+            DatabaseExchange.sendVote(forZone: self.zoneForRating!.id!, withVote: vote)
+        }
+    }
+    
     // Parking Polulation Submission
     func displayAlertForZone(zone:ZonePolygon)
     {
+        self.zoneForRating = zone
         self.populationAlert!.show()
-    }
-    
-    func alertView(alertView: DTAlertView!, clickedButtonAtIndex buttonIndex: Int)
-    {
-        
     }
 }

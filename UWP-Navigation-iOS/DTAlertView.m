@@ -1310,12 +1310,17 @@ const static CGFloat kMotionEffectExtent = 15.0f;
     
     self.slider.center = self.center;
     
-    self.percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 25, self.center.y + self.slider.frame.size.height/2-50, 50, 50)];
-    self.percentLabel.textAlignment = NSTextAlignmentCenter;
-    self.percentLabel.text = @"0%";
-    [self addSubview:self.percentLabel];
+    if(self.percentLabel == nil)
+    {
+        self.percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - 25, self.center.y + self.slider.frame.size.height/2-50, 50, 50)];
+        self.percentLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.percentLabel];
+        
+        [self addSubview:self.slider];
+    }
     
-    [self addSubview:self.slider];
+    self.percentLabel.text = @"0%";
+    self.slider.value = 0.0;
 }
 
 - (CGFloat)setupScrollViewToContentMessage:(UILabel *)messageLabel
