@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E42E6258-B598-4AE9-9D86-EA99431AC269</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UWP-Navigation-iOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF6AE9E9F5040B6AB82602497A961812577D0740</key>
+		<string>https://github.com/TheEffekted/UWP-Navigation-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UWP-Navigation-iOS.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF6AE9E9F5040B6AB82602497A961812577D0740</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TheEffekted/UWP-Navigation-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF6AE9E9F5040B6AB82602497A961812577D0740</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF6AE9E9F5040B6AB82602497A961812577D0740</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UWP-Navigation-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
