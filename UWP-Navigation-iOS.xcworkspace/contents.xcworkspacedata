@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UWP-Navigation-iOS.xcodeproj">
+      location = "group:/Users/Kyle/Documents/Development/Xcode Projects/UWP-Navigation-iOS/UWP Parking.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

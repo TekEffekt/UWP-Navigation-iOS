@@ -158,6 +158,6 @@ class MapTransform: MapObject, GMSMapViewDelegate, CLLocationManagerDelegate
     
     func unParkCar()
     {
-        
+        self.parkMarker!.map = nil
     }
 }
