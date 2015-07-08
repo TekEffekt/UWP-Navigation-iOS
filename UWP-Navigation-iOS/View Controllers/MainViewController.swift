@@ -19,6 +19,7 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
     var blackBackgroundView: UIView?
     var progressBar:ITProgressBar?
     var initialLoad:Bool?
+    var internetCheckTimer:NSTimer?
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
@@ -63,6 +64,7 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
         getFullnessOfZones()
         
         NSTimer.scheduledTimerWithTimeInterval(Constants.TIME_TO_REFRESH, target: self, selector: Selector("getFullnessOfZones"), userInfo: nil, repeats: true)
+        self.internetCheckTimer = NSTimer.scheduledTimerWithTimeInterval(Constants.SERVICE_TIMEOUT, target: self, selector: Selector("alertUserOfNoInternetConnection"), userInfo: nil, repeats: false)
     }
     
     // MARK: Networking
@@ -80,7 +82,13 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
             
             for zone:ZonePolygon in zones
             {
-                fullnessStrings.append(DatabaseExchange.getFullness(forZone: zone.id!))
+                var fullnessString = DatabaseExchange.getFullness(forZone: zone.id!)
+                
+                if let check = fullnessString
+                {
+                    fullnessStrings.append(fullnessString!)
+                }
+                
                 numberOfZonesLoaded++
                 
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
@@ -90,24 +98,47 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
             
             print(fullnessStrings)
             
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                self.mapView.colorMap(withFullnessAndConfidenceLevels: fullnessStrings)
-                self.progressBar!.hidden = true
-                self.progressBar!.progress = CGFloat(0.0)
-                
-                if(self.initialLoad == true)
-                {
-                    self.initialLoad = false
+            if fullnessStrings.count > 0
+            {
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.mapView.colorMap(withFullnessAndConfidenceLevels: fullnessStrings)
+                    self.progressBar!.hidden = true
+                    self.progressBar!.progress = CGFloat(0.0)
                     
-                    self.indicator.stopAnimating()
+                    if(self.internetCheckTimer!.valid)
+                    {
+                        self.internetCheckTimer!.invalidate()
+                    }
                     
-                    UIView.animateWithDuration(1.0, animations: { () -> Void in
-                        self.blackBackgroundView!.alpha = 0.0
-                        self.blurView!.alpha = 0.0
-                        self.blurView!.removeFromSuperview()
-                    })
-                }
-            })
+                    if(self.initialLoad == true)
+                    {
+                        self.initialLoad = false
+                        
+                        self.indicator.stopAnimating()
+                        
+                        UIView.animateWithDuration(1.0, animations: { () -> Void in
+                            self.blackBackgroundView!.alpha = 0.0
+                            self.blurView!.alpha = 0.0
+                            self.blurView!.removeFromSuperview()
+                        })
+                    }
+                })
+            }
+        }
+    }
+    
+    func alertUserOfNoInternetConnection()
+    {
+        if #available(iOS 8.0, *) {
+            let alert:UIAlertController = UIAlertController(title: "Internet Connectivity Issues", message: "Check your internet connection.", preferredStyle: UIAlertControllerStyle.Alert)
+            let action:UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            // Fallback on earlier versions
+            let alert:UIAlertView = UIAlertView(title: "Internet Connectivity Issues", message: "Check your internet connection.", delegate: nil, cancelButtonTitle: "Ok")
+            alert.show()
         }
     }
     

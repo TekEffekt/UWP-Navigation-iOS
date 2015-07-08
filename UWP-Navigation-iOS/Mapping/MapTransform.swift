@@ -75,34 +75,45 @@ class MapTransform: MapObject, GMSMapViewDelegate, CLLocationManagerDelegate
     
     func colorMap(withFullnessAndConfidenceLevels fullnessConfidenceStrings:[String])
     {
-        for(var i = 0; i < fullnessConfidenceStrings.count; i++)
+        if fullnessConfidenceStrings.count > 0
         {
-            let levels = fullnessConfidenceStrings[i]
-            let fullnessString:String = levels.componentsSeparatedByString(",")[0]
-            let confidenceString:String = levels.componentsSeparatedByString(",")[1]
-            
-            let fullness:Double = Double(fullnessString)!
-            let confidence:Double = Double(confidenceString)!
-            
-            if let zone:ZonePolygon = self.parkingZoneList![i]
+            for(var i = 0; i < fullnessConfidenceStrings.count; i++)
             {
-                var color:UIColor = UIColor()
-                if (fullness > 66) {
-                    color = UIColor.redColor()
-                }
-                else if (fullness >= 33 && fullness <= 66) {
-                    color = UIColor.yellowColor()
-                }
-                else if(fullness < 33 && fullness != -1) {
-                    color = UIColor.greenColor()
-                } else if(fullness == -1)
+                let levels = fullnessConfidenceStrings[i]
+                let fullnessString:String = levels.componentsSeparatedByString(",")[0]
+                let confidenceString:String = levels.componentsSeparatedByString(",")[1]
+                
+                let fullness:Double = Double(fullnessString)!
+                let confidence:Double = Double(confidenceString)!
+                
+                if let zone:ZonePolygon = self.parkingZoneList![i]
                 {
-                    color = UIColor.darkGrayColor()
+                    var color:UIColor = UIColor()
+                    if (fullness > 66) {
+                        color = UIColor.redColor()
+                    }
+                    else if (fullness >= 33 && fullness <= 66) {
+                        color = UIColor.yellowColor()
+                    }
+                    else if(fullness < 33 && fullness != -1) {
+                        color = UIColor.greenColor()
+                    } else if(fullness == -1)
+                    {
+                        color = UIColor.darkGrayColor()
+                    }
+                    
+                    var alpha:CGFloat = CGFloat(confidence / 100)
+                    
+                    if alpha < 0.2
+                    {
+                        alpha = 0.2
+                    }
+                    
+                    color = color.colorWithAlphaComponent(alpha)
+                    
+                    zone.polygon!.fillColor = color
                 }
-                
-                color = color.colorWithAlphaComponent(CGFloat(confidence / 100))
-                
-                zone.polygon!.fillColor = color
+
             }
         }
     }

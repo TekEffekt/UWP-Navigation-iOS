@@ -36,7 +36,7 @@ class DatabaseExchange
         }
     }
     
-    class func getFullness(forZone zoneId:String) -> String
+    class func getFullness(forZone zoneId:String) -> String?
     {
         let url:NSURL = NSURL(string: "\(Constants.BASE_URL)\(Constants.VOTE_AVG)\(zoneId)")!
         
@@ -59,7 +59,7 @@ class DatabaseExchange
         } catch
         {
             print("ERROR")
-            return ""
+            return nil
         }
     }
     

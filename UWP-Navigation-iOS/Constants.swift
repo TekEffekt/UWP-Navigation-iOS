@@ -72,6 +72,7 @@ class Constants
     static let VOTE = "v/"
     static let VOTE_AVG = "va/"
     static let TIME_TO_REFRESH:NSTimeInterval = 10.0
+    static let SERVICE_TIMEOUT:NSTimeInterval = 20.0
     
     
 }
