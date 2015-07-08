@@ -31,7 +31,14 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ghs-JX-J33" secondAttribute="bottom" id="rJk-xE-JQL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="UWP Parking" id="Jvw-zy-Eu2"/>
+                    <navigationItem key="navigationItem" title="UWP Parking" id="Jvw-zy-Eu2">
+                        <barButtonItem key="rightBarButtonItem" title="Park" id="0Nj-pc-xG6">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="parkButtonPressed:" destination="BYZ-38-t0r" id="1lB-IS-awL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="ghs-JX-J33" id="QZW-Vk-DGC"/>
                     </connections>

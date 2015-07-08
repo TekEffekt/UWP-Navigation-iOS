@@ -127,5 +127,18 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
         self.populationAlert!.show()
     }
     
+    // MARK: Parking
+    @IBAction func parkButtonPressed(sender: UIBarButtonItem)
+    {
+        if sender.title! == "Park"
+        {
+            sender.title! = "Unpark"
+            self.mapView!.parkCar()
+        } else
+        {
+            sender.title! = "Park"
+            self.mapView.unParkCar()
+        }
+    }
     
 }

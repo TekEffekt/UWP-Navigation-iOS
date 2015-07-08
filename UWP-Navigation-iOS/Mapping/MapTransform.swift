@@ -10,13 +10,16 @@
 
 import UIKit
 
-class MapTransform: MapObject, GMSMapViewDelegate
+class MapTransform: MapObject, GMSMapViewDelegate, CLLocationManagerDelegate
 {
     // MARK: Properties
     var map:GMSMapView?
     var parkingZoneList:[ZonePolygon]?
     var buidlingZoneList:[ZonePolygon]?
     var passedViewController:MainViewController?
+    var locationManager:CLLocationManager?
+    var usersCurrentLocation:CLLocationCoordinate2D?
+    var parkMarker:GMSMarker?
     
     // MARK: Map Initialization
     func setupMapWithParent(controller:MainViewController)
@@ -24,10 +27,12 @@ class MapTransform: MapObject, GMSMapViewDelegate
         let camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(Constants.DEFAULT_CAMERA_LAT, longitude: Constants.DEFAULT_CAMERA_LON, zoom: 17)
         
         self.map = GMSMapView.mapWithFrame(self.frame, camera: camera)
+        self.map!.myLocationEnabled = true
         self.map!.delegate = self
         self.addSubview(self.map!)
         self.passedViewController = controller
-                
+        setupLocationTracking()
+        
         buildPolymap()
     }
     
@@ -48,6 +53,23 @@ class MapTransform: MapObject, GMSMapViewDelegate
         {
             buildingPoly.polygon!.fillColor = UIColor.clearColor()
             buildingPoly.polygon!.map = self.map
+        }
+    }
+    
+    func setupLocationTracking()
+    {
+        self.locationManager = CLLocationManager()
+        
+        if #available(iOS 8.0, *) {
+            self.locationManager!.requestAlwaysAuthorization()
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager!.delegate = self
+            locationManager!.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager!.startUpdatingLocation()
         }
     }
     
@@ -82,7 +104,6 @@ class MapTransform: MapObject, GMSMapViewDelegate
                 
                 zone.polygon!.fillColor = color
             }
-            
         }
     }
     
@@ -99,7 +120,6 @@ class MapTransform: MapObject, GMSMapViewDelegate
         {
             print("Nothing")
         }
-        
     }
     
     func getZoneTapped(withOverlayTapped overlay:GMSOverlay) -> ZonePolygon?
@@ -123,5 +143,21 @@ class MapTransform: MapObject, GMSMapViewDelegate
         return nil
     }
     
+    // MARK: Parking and User's Location
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.usersCurrentLocation = locations[0].coordinate
+    }
     
+    func parkCar()
+    {
+        self.parkMarker = GMSMarker(position: self.usersCurrentLocation!)
+        self.parkMarker!.icon = UIImage(named: "Parking")
+        self.parkMarker!.flat = true
+        self.parkMarker!.map = map
+    }
+    
+    func unParkCar()
+    {
+        
+    }
 }

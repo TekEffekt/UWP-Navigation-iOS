@@ -10,6 +10,8 @@
 		271222901B4B46F700B03721 /* DatabaseExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712228F1B4B46F700B03721 /* DatabaseExchange.swift */; };
 		2712229E1B4CEB8F00B03721 /* ITProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2712229B1B4CEB8F00B03721 /* ITProgressBar.m */; };
 		2712229F1B4CEB8F00B03721 /* UIImage+BBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2712229D1B4CEB8F00B03721 /* UIImage+BBlock.m */; };
+		271222A31B4CFEAC00B03721 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271222A21B4CFEAC00B03721 /* CoreLocation.framework */; };
+		271222A51B4CFEB400B03721 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271222A41B4CFEB400B03721 /* MapKit.framework */; };
 		274F01781B49D48200CEDF3A /* DTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F01771B49D48200CEDF3A /* DTAlertView.m */; };
 		274F017B1B49D4C900CEDF3A /* DTProgressStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */; };
 		275BF7F41B432568002C7FB5 /* PolyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BF7F31B432568002C7FB5 /* PolyFactory.swift */; };
@@ -52,6 +54,8 @@
 		2712229B1B4CEB8F00B03721 /* ITProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITProgressBar.m; sourceTree = "<group>"; };
 		2712229C1B4CEB8F00B03721 /* UIImage+BBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBlock.h"; sourceTree = "<group>"; };
 		2712229D1B4CEB8F00B03721 /* UIImage+BBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBlock.m"; sourceTree = "<group>"; };
+		271222A21B4CFEAC00B03721 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		271222A41B4CFEB400B03721 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		274F01761B49D48200CEDF3A /* DTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAlertView.h; sourceTree = "<group>"; };
 		274F01771B49D48200CEDF3A /* DTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAlertView.m; sourceTree = "<group>"; };
 		274F01791B49D4C900CEDF3A /* DTProgressStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProgressStatus.h; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271222A51B4CFEB400B03721 /* MapKit.framework in Frameworks */,
+				271222A31B4CFEAC00B03721 /* CoreLocation.framework in Frameworks */,
 				C36AB63EA9032003A7A04A22 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +222,8 @@
 		9BCF6A033A68A8CA1313A472 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				271222A41B4CFEB400B03721 /* MapKit.framework */,
+				271222A21B4CFEAC00B03721 /* CoreLocation.framework */,
 				B07BDB01589E669F838074F2 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -489,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -528,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
