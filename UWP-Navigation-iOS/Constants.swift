@@ -71,6 +71,7 @@ class Constants
     static let BASE_URL = "http://cinnamon.cs.uwp.edu/parking/app.php/"
     static let VOTE = "v/"
     static let VOTE_AVG = "va/"
+    static let TIME_TO_REFRESH:NSTimeInterval = 10.0
     
     
 }

@@ -17,12 +17,19 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
     var indicator: UIActivityIndicatorView!
     var blurView: UIView?
     var blackBackgroundView: UIView?
+    var progressBar:ITProgressBar?
+    var initialLoad:Bool?
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        self.progressBar = ITProgressBar(frame: CGRectMake(CGRectGetMidX(self.view.frame), 0, self.view.frame.width, 3))
+        self.view.addSubview(self.progressBar!)
+        self.progressBar!.hidden = true
+        self.progressBar!.progress = 0.0
         
         self.populationAlert = DTAlertView(title: "How full is this zone?", delegate: self, cancelButtonTitle: "Cancel", positiveButtonTitle: "Submit")
         self.indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
@@ -42,6 +49,8 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
         self.blackBackgroundView!.backgroundColor = UIColor.blackColor()
         self.view.addSubview(self.blackBackgroundView!)
         self.view.addSubview(self.blurView!)
+        
+        self.initialLoad = true
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -51,12 +60,19 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
         self.indicator.center = self.mapView.center
         self.view.addSubview(self.indicator)
         self.indicator.startAnimating()
-        getFullnessOfZones(withZones: Polyfactory().parkingZones)
+        getFullnessOfZones()
+        
+        NSTimer.scheduledTimerWithTimeInterval(Constants.TIME_TO_REFRESH, target: self, selector: Selector("getFullnessOfZones"), userInfo: nil, repeats: true)
     }
     
     // MARK: Networking
-    func getFullnessOfZones(withZones zones:[ZonePolygon])
+    func getFullnessOfZones()
     {
+        let zones:[ZonePolygon] = Polyfactory().parkingZones
+        
+        self.progressBar!.hidden = false
+        var numberOfZonesLoaded:CGFloat = 0
+        
         let queue = NSOperationQueue()
         
         queue.addOperationWithBlock { () -> Void in
@@ -65,19 +81,32 @@ class MainViewController: UIViewController, DTAlertViewDelegate {
             for zone:ZonePolygon in zones
             {
                 fullnessStrings.append(DatabaseExchange.getFullness(forZone: zone.id!))
+                numberOfZonesLoaded++
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.progressBar!.progress = numberOfZonesLoaded / CGFloat(35.0)
+                })
             }
             
             print(fullnessStrings)
             
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 self.mapView.colorMap(withFullnessAndConfidenceLevels: fullnessStrings)
-                self.indicator.stopAnimating()
+                self.progressBar!.hidden = true
+                self.progressBar!.progress = CGFloat(0.0)
                 
-                UIView.animateWithDuration(1.0, animations: { () -> Void in
-                    self.blackBackgroundView!.alpha = 0.0
-                    self.blurView!.alpha = 0.0
-                    self.blurView!.removeFromSuperview()
-                })
+                if(self.initialLoad == true)
+                {
+                    self.initialLoad = false
+                    
+                    self.indicator.stopAnimating()
+                    
+                    UIView.animateWithDuration(1.0, animations: { () -> Void in
+                        self.blackBackgroundView!.alpha = 0.0
+                        self.blurView!.alpha = 0.0
+                        self.blurView!.removeFromSuperview()
+                    })
+                }
             })
         }
     }

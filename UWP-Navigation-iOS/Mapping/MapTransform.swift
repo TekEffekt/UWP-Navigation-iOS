@@ -64,29 +64,25 @@ class MapTransform: MapObject, GMSMapViewDelegate
             
             if let zone:ZonePolygon = self.parkingZoneList![i]
             {
+                var color:UIColor = UIColor()
                 if (fullness > 66) {
-                    zone.polygon!.fillColor = UIColor.redColor()
+                    color = UIColor.redColor()
                 }
                 else if (fullness >= 33 && fullness <= 66) {
-                    zone.polygon!.fillColor = UIColor.yellowColor()
+                    color = UIColor.yellowColor()
                 }
-                else if(fullness < 33) {
-                    zone.polygon!.fillColor = UIColor.greenColor()
+                else if(fullness < 33 && fullness != -1) {
+                    color = UIColor.greenColor()
+                } else if(fullness == -1)
+                {
+                    color = UIColor.darkGrayColor()
                 }
+                
+                color = color.colorWithAlphaComponent(CGFloat(confidence / 100))
+                
+                zone.polygon!.fillColor = color
             }
             
-//            if (Double.valueOf(confidence) > 66) {
-//                this.color = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
-//            }
-//            if (Double.valueOf(confidence) >= 33 && Double.valueOf(confidence) <= 66) {
-//                this.color = Color.argb(170, Color.red(color), Color.green(color), Color.blue(color));
-//            }
-//            if (Double.valueOf(confidence) < 33) {
-//                this.color = Color.argb(85, Color.red(color), Color.green(color), Color.blue(color));
-//            }
-//            if (Double.valueOf(fullness) == -1) {
-//                this.color = Color.DKGRAY;
-//            }
         }
     }
     

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		271222901B4B46F700B03721 /* DatabaseExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712228F1B4B46F700B03721 /* DatabaseExchange.swift */; };
+		2712229E1B4CEB8F00B03721 /* ITProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2712229B1B4CEB8F00B03721 /* ITProgressBar.m */; };
+		2712229F1B4CEB8F00B03721 /* UIImage+BBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2712229D1B4CEB8F00B03721 /* UIImage+BBlock.m */; };
 		274F01781B49D48200CEDF3A /* DTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F01771B49D48200CEDF3A /* DTAlertView.m */; };
 		274F017B1B49D4C900CEDF3A /* DTProgressStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */; };
 		275BF7F41B432568002C7FB5 /* PolyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BF7F31B432568002C7FB5 /* PolyFactory.swift */; };
@@ -46,6 +48,10 @@
 		0D6B2C3836C2C35DF31CAA9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		16C381B0F75C04E03AC361D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2712228F1B4B46F700B03721 /* DatabaseExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseExchange.swift; sourceTree = "<group>"; };
+		2712229A1B4CEB8F00B03721 /* ITProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITProgressBar.h; sourceTree = "<group>"; };
+		2712229B1B4CEB8F00B03721 /* ITProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITProgressBar.m; sourceTree = "<group>"; };
+		2712229C1B4CEB8F00B03721 /* UIImage+BBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBlock.h"; sourceTree = "<group>"; };
+		2712229D1B4CEB8F00B03721 /* UIImage+BBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBlock.m"; sourceTree = "<group>"; };
 		274F01761B49D48200CEDF3A /* DTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAlertView.h; sourceTree = "<group>"; };
 		274F01771B49D48200CEDF3A /* DTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAlertView.m; sourceTree = "<group>"; };
 		274F01791B49D4C900CEDF3A /* DTProgressStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProgressStatus.h; sourceTree = "<group>"; };
@@ -109,6 +115,10 @@
 		274F017D1B4A654300CEDF3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2712229A1B4CEB8F00B03721 /* ITProgressBar.h */,
+				2712229B1B4CEB8F00B03721 /* ITProgressBar.m */,
+				2712229C1B4CEB8F00B03721 /* UIImage+BBlock.h */,
+				2712229D1B4CEB8F00B03721 /* UIImage+BBlock.m */,
 				274F01791B49D4C900CEDF3A /* DTProgressStatus.h */,
 				274F017A1B49D4C900CEDF3A /* DTProgressStatus.m */,
 				274F01761B49D48200CEDF3A /* DTAlertView.h */,
@@ -377,10 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2712229F1B4CEB8F00B03721 /* UIImage+BBlock.m in Sources */,
 				27D320D71B4474D000E10F08 /* Constants.swift in Sources */,
 				274F017B1B49D4C900CEDF3A /* DTProgressStatus.m in Sources */,
 				275BF7F61B433059002C7FB5 /* ZonePolygon.swift in Sources */,
 				27C185F31B42023F00DB6BE3 /* AppDelegate.swift in Sources */,
+				2712229E1B4CEB8F00B03721 /* ITProgressBar.m in Sources */,
 				274F01781B49D48200CEDF3A /* DTAlertView.m in Sources */,
 				27C1862C1B420A2500DB6BE3 /* MapObject.swift in Sources */,
 				275BF7F41B432568002C7FB5 /* PolyFactory.swift in Sources */,
